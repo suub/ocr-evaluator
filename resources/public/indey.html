@@ -1,0 +1,76 @@
+<html>
+<head>
+<script src="http://fb.me/react-0.9.0.js"></script>
+<script type='text/javascript' id='lt_ws' src='http://localhost:50941/socket.io/lighttable/ws.js'></script>
+<script language="javascript" src="js/main.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet">
+<style>
+ body {
+ padding-top: 60px; 
+ padding-bottom: 40px;
+ }
+ .wrap {
+ width:1000px;
+ margin:0 auto;
+ }
+ .left {
+ float:left;
+ width:500px;
+ }
+ .right{
+ float:right;
+ width:500px;
+
+ }
+.summary-div{
+width:1000px;
+display:block;
+}
+.boxed {
+ border:solid black 1px;
+}
+table{
+border-collapse:collapse;
+border:1px solid black;
+}
+table-div{
+width:1000px;
+}
+
+
+table td{
+border:1px solid black;
+}
+</style>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">ocr-visualizer</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li id="home-btn"><a href="#">Home</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div id="stage" class="container">
+      <h1>OCR-Visualizer</h1>
+      <div id="page-container">
+	<div id="pages">
+
+	</div>
+      </div> 
+      
+      
+    </div> <!-- /container -->
+</body>
+</html>

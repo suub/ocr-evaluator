@@ -1,0 +1,29 @@
+* Vorgenommene Änderungen
+  - Pocten -> Poeten
+  - El -> Ei
+  - Sind auch in Kleinschreibweise hinzugefügt
+  - "ve" aus dict.fuw gelöscht 
+    Ansatz: "manuell - niederfrequente kurze Wörter entfernen"
+    ebenso "287	ni	ni	ni"
+           4	uit	uit	uit
+1	Gi	Gi	Gi
+1	él	el	el
+1	Zi	Zi	Zi
+1	ax	ax	ax
+1	ûz	auz	auz
+1	iis	iis	iis
+1	tü	tü	tue
+1	od	od	Od
+1	vá	va	va
+1	av	av	av
+1	za	za	za
+75	el	el	el
+1	sel	sel	sel
+1	hre	hre	ihre
+1	adi	adi	adi
+1	petito	petito	petito
+1	Dog	Dog	Dog
+ 
+ 
+
+ 
