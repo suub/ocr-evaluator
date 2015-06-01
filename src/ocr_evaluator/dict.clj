@@ -934,10 +934,10 @@
           vol (le/volume-docs jg)
           artcl (le/select-article vol)
           vlid (article-vlids artcl)]
-      vlid)))
+      vlid))
 
-(defn save-vlids []
-  (spit "vlids-scraper.edn" (pr-str (into [] grenzbote-vlids))))
+  (defn save-vlids []
+    (spit "vlids-scraper.edn" (pr-str (into [] grenzbote-vlids)))))
 (comment
 
   (def grenzbote-vlids
