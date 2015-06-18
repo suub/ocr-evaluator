@@ -1,4 +1,3 @@
-
 (ns ocr-evaluator.core
   (:require [seesaw.core :refer :all]
             [seesaw.chooser :refer :all]
@@ -36,7 +35,7 @@
                         [:action
                          (fn [& args]
                            (value! gt-dir
-                                   (.getPath (choose-file))))])])
+                                   (.getPath (choose-file :selection-mode :dirs-only))))])])
               "Ordner mit OCR"
               (flow-panel
                :items
@@ -46,7 +45,7 @@
                         [:action
                          (fn [& args]
                            (value! ocr-dir
-                                   (.getPath (choose-file))))])])
+                                   (.getPath (choose-file :selection-mode :dirs-only))))])])
               "Zielordner für Ergebnisse"
               (flow-panel
                :items
@@ -57,7 +56,7 @@
                          (fn [& args]
                            (prn "hi")
                            (value! target-dir
-                                   (.getPath (choose-file))))])])
+                                   (.getPath (choose-file :selection-mode :dirs-only))))])])
               ""
               (button :text "Auszählung starten"
                       :listen
@@ -92,7 +91,7 @@
                         [:action
                          (fn [& args]
                            (value! param-dir
-                                   (.getPath (choose-file))))])])
+                                   (.getPath (choose-file :selection-mode :dirs-only))))])])
               "Eingabeordner"
               (flow-panel
                :items
@@ -102,7 +101,7 @@
                         [:action
                          (fn [& args]
                            (value! input-dir
-                                   (.getPath (choose-file))))])])
+                                   (.getPath (choose-file :selection-mode :dirs-only))))])])
               "Ausgabeordner"
               (flow-panel
                :items
@@ -112,7 +111,7 @@
                         [:action
                          (fn [& args]
                            (value! output-dir
-                                   (.getPath (choose-file))))])])
+                                   (.getPath (choose-file :selection-mode :dirs-only))))])])
               ""
               (button :text "Nachkorrektur starten"
                       :listen
