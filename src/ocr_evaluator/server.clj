@@ -1,12 +1,13 @@
 (ns ocr-evaluator.server
-  (:use [ring.middleware.resource :only [wrap-resource]]
-        [ring.middleware.file-info :only [wrap-file-info]]
+  (:use [compojure.core]
+        [compojure.handler]
         [ring.adapter.jetty :as jetty]
-        [compojure.core]
-        [compojure.handler])
-  (:require [compojure.route :as route]
-            [me.raynes.laser :as l]
-            [clojure.java.io :refer :all])
+        [ring.middleware.file-info :only [wrap-file-info]]
+        [ring.middleware.resource :only [wrap-resource]])
+  (:require [clojure.java.io :as io]
+            [clojure.java.io :refer :all]
+            [compojure.route :as route]
+            [me.raynes.laser :as l])
   (:gen-class))
 
 (defn get-files-sorted [dir]
@@ -14,8 +15,21 @@
        rest
        (sort-by #(.getName %))))
 
+(defn read-file
+  "List eine Datei ein entweder vom Verzeichnis oder vom jar
+   Achtung! fügt automatisch ein / am Anfang ein wenn es im jar archiv sucht
+   Ordner können im jar archiv nicht! gefunden werden"
+  [path]
+  (let [f (file path)]
+    (if (.exists f)
+      f
+      (reader (.getResourceAsStream (class false)
+                                    (.substring path
+                                                (count "resources")
+                                                (count path)))))))
+
 (defn index-site []
-  (l/document (l/parse (file "resources/public/indey.html"))))
+  (l/document (l/parse (read-file "resources/public/indey.html"))))
 
 (defroutes handler
   (GET "/index.html" [] (index-site))
