@@ -10,6 +10,6 @@ simple
 
 ## License
 
-Copyright © 2013-2016 Staats- und Universitätsbibliothek Bremen
+Copyright © 2015-2016 Staats- und Universitätsbibliothek Bremen
 
 Distributed under the MIT License.
