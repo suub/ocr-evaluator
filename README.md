@@ -10,7 +10,6 @@ simple
 
 ## License
 
-Copyright © 2015 FIXME
+Copyright © 2013-2016 Staats- und Universitätsbibliothek Bremen
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the MIT License.
